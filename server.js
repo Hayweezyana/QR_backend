@@ -7,7 +7,10 @@ let visitorCount = 0;
 
 const COLORS = ["RED", "BLUE", "GREEN", "YELLOW", "ORANGE", "PURPLE"];
 
-app.use(cors());
+app.use(cors({
+  origin: "https://qrcodeforlafarge.netlify.app/",
+
+}));
 
 app.get("/get-color", (req, res) => {
   visitorCount++;
@@ -17,5 +20,5 @@ app.get("/get-color", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at https://qr-server-uxza.onrender.com:${port}`);
 });
