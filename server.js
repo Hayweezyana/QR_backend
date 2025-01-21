@@ -7,10 +7,7 @@ let visitorCount = 0;
 
 const COLORS = ["RED", "BLUE", "GREEN", "YELLOW", "ORANGE", "PURPLE"];
 
-app.use(cors({
-  origin: "https://qrcodeforlafarge.netlify.app/",
-
-}));
+app.use(cors());
 
 app.get("/get-color", (req, res) => {
   visitorCount++;
