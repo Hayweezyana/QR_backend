@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Group</title>
+</head>
+<body>
+  <h1>WELCOME TO THE GROUPING PAGE</h1>
+  <p>YOUR ASSIGNED GROUP: <span id="color" style="font-weight: bolder;"></span></p>
+
+  <script>
+    async function fetchColor() {
+      try {
+        const response = await fetch("https://qr-server-uxza.onrender.com/");
+        const data = await response.json();
+        const colorElement = document.getElementById("color");
+        colorElement.textContent = data.color;
+        colorElement.style.color = data.color;
+      } catch (error) {
+        console.error("Error fetching color:", error);
+      }
+    }
+
+    fetchColor();
+  </script>
+</body>
+</html>
