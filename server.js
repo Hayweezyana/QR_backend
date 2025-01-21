@@ -13,6 +13,7 @@ app.use(cors({
 }));
 
 app.get("/get-color", (req, res) => {
+  res.send("Welcome to the visitor color backend!");
   visitorCount++;
   const index = Math.floor((visitorCount - 1) / 5) % COLORS.length;
   const color = COLORS[index];
