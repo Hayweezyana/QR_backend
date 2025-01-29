@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let visitorCount = 0;
 
-const COLORS = ["RED", "BLUE", "GREEN", "YELLOW", "PURPLE"];
+const COLORS = ["RED", "BLUE", "GREEN", "ORANGE", "PURPLE"];
 
 app.use(cors());
 
