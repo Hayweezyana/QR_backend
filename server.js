@@ -8,13 +8,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let visitorCount = 0;
 
-const COLORS = ["RED", "BLUE", "GREEN", "ORANGE", "PURPLE"];
+const COLORS = ["RED-1", "BLUE-2", "GREEN-3", "ORANGE-4"];
 
 app.use(cors());
 
 app.get("/get-color", (req, res) => {
   visitorCount++;
-  const index = Math.floor((visitorCount - 1) / 6) % COLORS.length;
+  const index = Math.floor((visitorCount - 1) / 7) % COLORS.length;
   const color = COLORS[index];
   res.json({ color, visitorCount });
 });
